@@ -1,0 +1,170 @@
+<div class="body-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tab-button text-center mt-3">
+          <button class="btn btn-sm btn-primary mx-1">
+            <i class="fa fa-filter"></i> Football
+          </button>
+          <button class="btn btn-sm btn-info mx-1">
+            <i class="fa fa-filter"></i> Tennis
+          </button>
+          <button class="btn btn-sm btn-success mx-1">
+            <i class="fa fa-filter"></i> Cricket
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-header d-flex justify-content-between">
+            <h3>Matches</h3>
+            <button (click)="showMatchForm()" class="btn btn-info btn-sm">
+              <i class="fa fa-plus"></i> Add Match
+            </button>
+          </div>
+          <div class="card-body p-0 p-sm-3">
+            <!-- add match form section -->
+            <div id="form-wrapper">
+              <div id="form-add-match-wrapper">
+
+
+
+
+
+<form>
+<div class="container">
+  <div class="row">
+   
+    <div class="col-6 col-sm-4">
+
+
+ <select class="form-select" aria-label="Default select example" (change)='onOptionsSelected($event)' >
+   <option selected>Open this select menu</option>
+   <option  *ngFor="let competition, key of competitions" value = "{{competitions[competition]}}"><a class="dropdown-item" >{{competition.long_name}}</a></option>
+   
+ </select>     
+    </div>
+    <div class="col-6 col-sm-4">
+    <select class="form-select" aria-label="Default select example" (change)='onoptionforrunner($event)'  >
+      <option  *ngFor="let match of matches" value = "{{match}}" >
+        {{match.runners[0].runnerName}} v {{match.runners[1].runnerName}}
+      </option>
+      
+    </select> 
+</div>
+    
+    <div class="w-100 d-none d-md-block"></div>
+
+    <div class="col-6 col-sm-4">
+
+      <div class="mb-3">
+    <label for="EVENT" class="form-label">EVENT ID (Betfain)</label>
+    <input type="text" class="form-control" id="EVENT" >
+  </div>
+
+    </div>
+    <div class="col-6 col-sm-4">
+
+      <div class="mb-3">
+    <label for="Market" class="form-label">Market ID ( Betfair )</label>
+    <input type="text" class="form-control" id="Market" >
+  </div>
+
+
+
+
+    </div>
+
+       <div class="w-100 d-none d-md-block"></div>
+
+    <div class="col-6 col-sm-4">
+
+      <div class="mb-3">
+    <label for="Score" class="form-label">Score ID</label>
+    <input type="text" class="form-control" id="Score" >
+  </div>
+    </div>
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="Full" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="Full" >
+  </div>
+
+
+    </div>
+
+
+    <div class="w-100 d-none d-md-block"></div>
+
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="Name" class="form-label">Short Name</label>
+    <input type="text" class="form-control" id="Name" >
+  </div>
+
+
+
+    </div>
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="Time" class="form-label">Start Time</label>
+    <input type="text" class="form-control" id="Time" >
+  </div>
+</div>
+
+       <div class="w-100 d-none d-md-block"></div>
+
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="Min" class="form-label">Bet Min</label>
+    <input type="text" class="form-control" id="Min">
+  </div>
+    </div>
+    <div class="col-6 col-sm-4">
+
+      <div class="mb-3">
+    <label for="Max" class="form-label">Bet Max</label>
+    <input type="text" class="form-control" id="Max">
+  </div>
+
+    </div>
+
+
+  <div class="w-100 d-none d-md-block"></div>
+
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="Teama" class="form-label">Team A</label>
+    <input type="text" class="form-control" id="Teama" >
+  </div>
+    </div>
+
+    
+    <div class="col-6 col-sm-4">
+      <div class="mb-3">
+    <label for="TeamB" class="form-label">Team B</label>
+    <input type="text" class="form-control" id="TeamB" >
+  </div>
+
+  <div class="row g-0">
+    <div class="col-sm-6 col-md-5"></div>
+    <div class="col-6 col-md-4">
+      <button   
+                      class="btn btn-danger btn-lg">cancel</button>
+    </div>  <div class="col-6 col-md-3">
+      <button type="submit" class="btn btn-success btn-lg">save</button>
+    
+    
+    </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
